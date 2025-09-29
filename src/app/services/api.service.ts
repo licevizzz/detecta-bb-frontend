@@ -6,8 +6,7 @@ import { catchError, Observable, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  //private baseUrl = 'http://localhost:5000';
-  private baseUrl = 'https://detector-boletos.onrender.com';
+  private baseUrl = 'https://detectorboletos.onrender.com/api';
 
   constructor(private http: HttpClient) {}
 
@@ -17,7 +16,7 @@ export class ApiService {
     formData.append('password', password); 
 
     return this.http
-      .post(`${this.baseUrl}/boleto/upload`, formData)
+      .post(`${this.baseUrl}/upload/analyze`, formData)
       .pipe(catchError(this.handleError));
   }
 
