@@ -78,6 +78,7 @@
             },
             "development": {
               "buildTarget": "app:build:development"
+             "proxyConfig": "proxy.conf.json"
             },
             "ci": {
               "progress": false
